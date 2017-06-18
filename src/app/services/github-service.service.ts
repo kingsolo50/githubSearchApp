@@ -8,8 +8,8 @@ import 'rxjs/add/operator/map';
 export class GithubService {
 
   private username:string;
-  private client_id = '8487caef7a51dbdab7a7';
-  private client_secret = 'e392d16d3a6a604198162b1ec35fc23d112ef';
+  private client_id = '???';
+  private client_secret = '???';
 
   constructor(private _http:Http) { 
     console.log('Github service ready..');
