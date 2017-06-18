@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 //components
 
 //service
-import { GithubService } from '../services/github-service.service';
+import { GithubService } from '../services/github-service';
 //map function
 import 'rxjs/add/operator/map';
 

@@ -10,7 +10,7 @@ import { FormGroup  } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { GithubComponent } from './components/profile.component';
 //service
-import { GithubService } from './services/github-service.service';
+import { GithubService } from './services/github-service';
 //http provider
 import { HttpModule } from '@angular/http'; // http requests
 

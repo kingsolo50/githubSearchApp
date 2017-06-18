@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
 
+## Connect your App to Github
+
+Add client_id and client_secret to github-service.ts.[Connect to Github](https://auth0.com/docs/connections/social/github)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
