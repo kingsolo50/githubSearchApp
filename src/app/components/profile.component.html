@@ -1,0 +1,68 @@
+<div *ngIf="user">
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12">     
+      <div class="input-group col-xs-4">
+        <!-- data  -->
+        <!-- [(ngModel)]="username" -->
+        <input type="text" class="form-control" placeholder="Enter Github Username..." name="username" [(ngModel)]="username" (keyup)="searchUser()">
+          <span class="input-group-btn">
+            <button class="btn btn-success" type="button">&nbsp;Go!</button>
+          </span>
+      </div>                       
+    </div> 
+  </div>
+  <hr class="my-4">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <!-- <div class="card" style="width: 20rem;"> -->
+      <div class="card">
+      <img class="card-img-top img-responsive" src="{{user.avatar_url}}" alt="GitHub User Profile Pic">
+        <div class="card-block">
+          <h4 class="card-title">{{user.name}}</h4>
+          <h6 class="card-title">AKA: {{user.login}}</h6>
+          <h6 class="card-title">Memeber since: {{user.created_at}}</h6>
+          <h6 class="card-title">Email: {{user.email}}</h6>
+          <h6 class="card-title">Location: {{user.location}}</h6>
+          <p>
+            <a href="{{user.html_url}}" class="btn btn-default btn-block" target="_blank">View on GitHub</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12">
+      <ol class="breadcrumb" style="font-size: medium;">
+        <li class="breadcrumb-item"><span class="label label-primary">Public Repo's: {{user.public_repos}}</span></li>
+        <li class="breadcrumb-item"><span class="label label-success">Public Gists {{user.public_gists}}</span></li>
+        <li class="breadcrumb-item"><span class="label label-info">Followers {{user.followers}}</span></li>
+        <li class="breadcrumb-item"><span class="label label-warning">Following {{user.following}}</span></li>
+      </ol>
+      <div class="row">
+        <!-- to loop through use ngFor -->
+        <div class="col-xs-12">
+          <h4>Repos</h4>
+        </div>
+        <div class="col-xs-12"> 
+          <div *ngFor="let repo of repos">
+            <ul class="list-group">
+              <a href="{{repo.html_url}}" target="_blank">
+                <li class="list-group-item col-xs-6"><strong>{{repo.name}}</strong></li>
+              </a>
+              <h6>Description</h6>
+              <p>
+                {{repo.description}}
+              </p>
+              <p>
+                Watchers: {{repo.watchers}}
+              </p>
+              <p>
+                Forks: {{repo.forks}}
+              </p>
+            </ul>
+          </div><!-- /*ngFor -->
+        </div>          
+      </div>
+    </div>
+  </div>
+  </div>
+</div><!-- / ng-if -->
